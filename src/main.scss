@@ -162,7 +162,7 @@
 								@include gradient($colorpw,
 								$colorpw);
 								color: $colorblue1;
-								background-color: red;
+								background-color:$color;
 								text-shadow: none;
 							}
 							&:focus {
@@ -254,6 +254,13 @@
 				}
 			}
 			/*nav end*/
+		}
+
+		#side-bar-btn{
+			display:none;
+		}
+		#contact-bar-btn{
+			display:none;
 		}
 		/*header end*/
 		#leftside {
@@ -1044,7 +1051,7 @@
 			nav {
 				height: 40px;
 				margin-bottom: 0px;
-				ul {
+				ul#navi {
 					height: 100%;
 					li {
 						width: 16.5%;
@@ -1565,7 +1572,7 @@
 			nav {
 				height: 40px;
 				margin-bottom: 0px;
-				ul {
+				ul#navi {
 					height: 100%;
 					li {
 						height: 40px;
@@ -2061,7 +2068,7 @@
 			nav {
 				height: 40px;
 				margin-bottom: 0px;
-				ul {
+				ul#navi{
 					height: 100%;
 					li {
 						width: 16.5%;
@@ -2542,7 +2549,7 @@
 			nav {
 				height: 40px;
 				margin-bottom: 0px;
-				ul {
+				ul#navi {
 					width: 83%;
 					height: 100%;
 					li {
@@ -3004,7 +3011,7 @@
 			nav {
 				height: 40px;
 				margin-bottom: 0px;
-				ul {
+				ul#navi {
 					height: 100%;
 					li {
 						width: 16.5%;
@@ -3461,7 +3468,8 @@
 			nav {
 				height: 40px;
 				margin-bottom: 0px;
-				ul {
+
+				ul#navi {
 					height: 100%;
 					li {
 						width: 16.5%;
@@ -3881,6 +3889,26 @@
 @media only screen and (max-width: 667px) {
 	#wrapper {
 		width: 94%;
+
+		
+		.fade-enter-active, 
+		.fade-leave-active {
+			@include TranSition(all 1s ease);
+		}
+		.fade-enter 
+		/* .fade-leave-active below version 2.1.8 */ {
+		@include TranSition(all 5s ease-in-out);
+		
+		left:10px;
+
+		}
+		.fade-leave-to,
+		.fade-leave{
+		@include TranSition(all 1s ease);
+		left:-650px;
+		opacity: 0;
+
+		}
 		ul#navi.show{
 			left:10px;
 			opacity:1;
@@ -3889,10 +3917,10 @@
 		ul#navi.hide{
 			
 			left:-650px;
-			opacity:0;
 			@include TranSition(all 1s ease);
 			
 		}
+
 		header {
 			height: 107px;
 			figure#logo {
@@ -4040,9 +4068,12 @@
 			
 		}
 		#leftside {
-			width: 30%;
+			position:fixed;
+			z-index:100;
+			width: 200px;
 			padding-top: 1%;
-
+			left:7px;
+			
 			.leftsidebox {
 				width: 96%;
 				margin-bottom: 1%;
@@ -4132,6 +4163,7 @@
 			width: 200px;
 			margin-top: 1%;
 			@include TranSition(all 1s ease);
+			left:7px;
 			h1 {
 				text-indent: 2%;
 				font-size: 0.65em;
@@ -4161,7 +4193,8 @@
 			width:50%;
 			margin: 0 ;
 			@include TranSition(all 1s ease);
-			
+			left:7px;
+						
 			#contact-details {
 				
 				li {

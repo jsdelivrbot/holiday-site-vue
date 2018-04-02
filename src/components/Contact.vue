@@ -1,8 +1,9 @@
 <template>
   <div class="Contact">
-    <button v-on:click="contactFunction" id="contact-bar-btn">Contact Details</button>
+    <button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
 <!--Leftside-->
-<aside id="leftside3" class="hide" v-if="contactFunction">
+<transition name="fade">
+<aside id="leftside3" v-if="!show">
 
 <ul id="contact-details" >
 	<li><span><img :src= "'src/assets/images/images/Telephone.png'" ></span>Phone: <br/>123 436 7890</li>
@@ -11,7 +12,7 @@
 </ul>
 <div class="clearfix"></div>
 </aside>
-
+</transition>
 <main id="content2">
 <h1>Lorem ipsum dolor sit amet, consectetur</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br/>
@@ -61,6 +62,15 @@ Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nos
 <script>
 export default {
   name: 'Contact',
+  data(){
+  
+		return{
+
+			show :'true',
+						
+		}
+	
+	}
  
 }
 </script>

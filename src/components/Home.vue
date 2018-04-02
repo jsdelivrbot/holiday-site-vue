@@ -1,11 +1,12 @@
 <template>
   <div class="Home">
 
+<button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
 <!--Leftside-->
-<aside id="leftside">
+<aside id="leftside" class="hide" v-if="!show">
 
 <!---Search form-->
-<section class="leftsidebox">
+<section class="leftsidebox" >
 
 <h2>Holiday Search</h2>
 
@@ -281,6 +282,15 @@
 <script>
 export default {
   name: 'Home',
+  data(){
+  
+		return{
+
+			show :'true',
+						
+		}
+	
+	}
  
 }
 </script>

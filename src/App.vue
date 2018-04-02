@@ -79,32 +79,31 @@
 export default {
 	name: 'app',
 	methods: {
-
-    testerFunction: function(){
+		testerFunction: function(){
 
 			console.log(event);
 
-				event.preventDefault();
-				
-				var el = document.getElementById("navi");
+			event.preventDefault();
+			
+			var el = document.getElementById("navi");
 
-				var box = el.getAttribute("class");
+			var box = el.getAttribute("class");
 
-				if(box == "hide"){
+			if(box == "hide"){
 
-						el.setAttribute("class", "show");
+					el.setAttribute("class", "show");
 
-				}
-				else{
-						el.setAttribute("class", "hide");
+			}
+			else{
+					el.setAttribute("class", "hide");
 
-				}
-	
+			}
 		}
-
-
-	}, 
+	
+	}
 }
+
+
 
 </script>
 

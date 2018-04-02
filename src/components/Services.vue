@@ -1,7 +1,9 @@
 <template>
   <div class="Services">
+
 <!---Leftside-->
-<aside id="leftside3">
+<transition name="fade">
+<aside id="leftside3" v-if="!show">
 
 <figure>
 <figcaption>
@@ -18,7 +20,7 @@
 
 </figure>
 </aside>
-
+</transition>
 <main id="content2">
 
 <h1>Lorem ipsum dolor sit amet, consectetur</h1>
@@ -89,8 +91,16 @@
 
 <script>
 export default {
-  name: 'Services',
- 
+   	name: 'Services',
+   	data(){
+  
+		return{
+
+			show :'true',
+						
+		}
+	
+	}
 }
 </script>
 

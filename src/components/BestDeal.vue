@@ -1,8 +1,9 @@
 <template>
   <div class="BestDeal">
-				<button v-on:click="bestvalueFunction" id="side-bar-btn">SIDE</button>
+<button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
     <!--Leftside-->
-<aside id="leftside2" class="hide" v-if="bestvalueFunction">
+<transistion name="fade">
+<aside id="leftside2" v-if="!show">
 <br/>
 <h1>Filter By Season</h1>
 <ul>
@@ -32,6 +33,7 @@
 </ul>
 <br/>
 </aside>
+</transistion>
 
 <main id="content2">
 
@@ -70,6 +72,8 @@ export default {
   data(){
   
   	return{
+		
+		show: 'true',
 		
 		url: "src/assets/images/page2grandcanyon_03.jpg",
 		
@@ -121,12 +125,8 @@ export default {
 		],
 		
 		holiday :[
-			
-		
-		
 		],
         count: 10
-	
 	}
   
   }	

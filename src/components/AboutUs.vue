@@ -1,7 +1,8 @@
 <template>
   <div class="AboutUs">
 <!---Leftside-->
-<aside id="leftside3">
+<transistion name="fade">
+<aside id="leftside3" v-if="!show">
 
 <figure>
 <figcaption>
@@ -18,7 +19,7 @@
 
 </figure>
 </aside>
-
+</transistion>
 <!---Main Content-->
 <main id="content2">
 <h1>Lorem ipsum dolor sit amet, consectetur</h1>
@@ -63,6 +64,16 @@ Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nos
 <script>
 export default {
   name: 'AboutUs',
+
+  	data(){
+  
+		return{
+
+			show :'true',
+						
+		}
+	
+	}	
  
 }
 </script>

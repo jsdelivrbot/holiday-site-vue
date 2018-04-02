@@ -60,4 +60,10 @@ browserconfig.xml
 .editorconfig
 index.html
 src/sass-files/
+src/partials/.sass-cache/
+src/assets/js/templatemo custom.js
+src/vendor/
 src/npm-debug.log
+src/assets/images/
+src/assets/fonts/
+src/assets/icons/

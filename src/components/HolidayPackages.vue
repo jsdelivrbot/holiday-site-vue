@@ -2,10 +2,11 @@
 
   <div class="HolidayPackages">
 		
-		<button v-on:click="bestvalueFunction" id="side-bar-btn">SIDE</button>
+<button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
 
 <!---Leftside-->
-<aside id="leftside2" class="hide" v-if="bestvalueFunction">
+<transition name="fade">
+<aside id="leftside2" v-if="!show">
 <br/>
 <h1>Filter By Season</h1>
 <ul>
@@ -34,8 +35,8 @@
 
 </ul>
 <br/>
-
 </aside>
+</transition>
 
 <main id="content2">
 
@@ -70,7 +71,70 @@ export default {
 
 	
 	name: 'HolidayPackages',
+	
+	 data(){
+  
+		return{
 
+			show :'true',
+			
+			text:"raymond thompson",
+			
+			url: "src/assets/images/page2grandcanyon_03.jpg",
+			
+			title:'Lorem ipsum dolor sit amet.',
+			
+			pricesmall:'$399 - $599',
+							
+			place:'Yellowstone',
+			
+			month:'June',
+		
+			season :[
+			
+				{title:'Winter'},
+				{title:'Summer'},
+				{title:'Spring'},
+				{title:'Autumn'}
+			
+			],
+			
+			location :[
+			
+				{title:'London'},
+				{title:'Paris'},
+				{title:'Madrid'},
+				{title:'Rome'},
+				{title:'Dubai'}
+			
+			],
+			
+			price :[
+			
+				{title:'$100 - $500'},
+				{title:'$500 - $1000'},
+				{title:'$1000 - $1500'},
+				{title:'$1500 - $2000'},
+				{title:'$2000 +'}
+			
+			],
+			
+			rating :[
+			
+				{title:'1 Star'},
+				{title:'2 Star'},
+				{title:'3 Star'},
+				{title:'4 Star'},
+				{title:'5 Star'}
+			
+			],
+			
+			holiday :[
+			],
+			count: 10
+		}
+	
+	}	
  
 }
 </script>
