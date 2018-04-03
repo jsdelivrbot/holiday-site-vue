@@ -3910,12 +3910,11 @@
 
 		}
 		ul#navi.show{
-			left:10px;
+			left: 1vw;
 			opacity:1;
 			@include TranSition(all 1s ease);
 		}
 		ul#navi.hide{
-			
 			left:-650px;
 			@include TranSition(all 1s ease);
 			
@@ -3953,8 +3952,8 @@
 				width: 80px;
 				position: fixed;
 				z-index: 100;
-				left: 20px;
-				top: 65px;
+				left: 3vw;
+				top: 7vh;
 				background-color: $colorbg;
 				border: 0;
 				outline: none;
@@ -3962,6 +3961,12 @@
 				font-size: 0.9em;
 				text-align: center;
 				line-height: 40px;
+				&:hover{
+					cursor:pointer;
+					background-color: #fff;
+					color: $colorbg;
+	
+				}
 			}
 			/*contact end*/
 
@@ -3969,14 +3974,14 @@
 			nav {
 				height: 40px;
 				margin-bottom: 0px;
-				
+				left: 1vw;
 				ul#navi {
 					@include TranSition(all 1s ease);
 					position: fixed;
 					z-index: 100;
 					opacity:0;
-					top: 108px;
-					width: 92%;
+					top: 12vh;
+					width: 96%;
 					height: auto;
 					float: none;
 					padding: 1%;
@@ -4046,12 +4051,18 @@
 			background-color: $colorbg;
 			color: #fff;
 			z-index:100;
-			height:160px;
-			width:50px;
-			left:90vw;
-			top:50vh;
+			height:40px;
+			width:80px;
+			left: 17vw;
+    		top: 7vh;
 			border:none;
 			outline:none;
+			&:hover{
+				cursor:pointer;
+				background-color: #fff;
+				color: $colorbg;
+
+			}
 		}
 		#contact-bar-btn{
 			position: fixed;
@@ -4065,6 +4076,12 @@
 			border:none;
 			outline:none;
 			font-size:0.8em;
+			&:hover{
+				cursor:pointer;
+				background-color: #fff;
+				color: $colorbg;
+
+			}
 			
 		}
 		#leftside {
@@ -4072,8 +4089,8 @@
 			z-index:100;
 			width: 200px;
 			padding-top: 1%;
-			left:7px;
-			
+			left:3vw;
+		
 			.leftsidebox {
 				width: 96%;
 				margin-bottom: 1%;
@@ -4160,6 +4177,7 @@
 		#leftside2 {
 			position:fixed;
 			z-index:100;
+			top: 12vh;
 			width: 200px;
 			margin-top: 1%;
 			@include TranSition(all 1s ease);
@@ -4189,14 +4207,13 @@
 		}
 		#leftside3 {
 			position: absolute;
-			top: 20em;
-			width:50%;
+			top: 12vh;
+			width:60%;
 			margin: 0 ;
 			@include TranSition(all 1s ease);
-			left:7px;
-						
+			left:3vw;
 			#contact-details {
-				
+				width: 100%;
 				li {
 					line-height: 20px;
 					height: 80px;
@@ -4495,8 +4512,8 @@
 				}
 			}
 			#toggle-menu,button {
-				left: 20px;
-				top: 65px;
+				left: 3vw;
+				top: 7vh;
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -4505,9 +4522,8 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-					left: 3%;
-					top: 108px;
-					width: 92%;
+					left: 1vw;
+
 					li {
 						width: 100%;
 						height: 50px;
@@ -4542,18 +4558,15 @@
 		}
 		/*header end*/
 		#side-bar-btn{
-			left:90vw;
 
 		}
 		#contact-bar-btn{
 			font-size: 0.75em;
-
 			
 		}
 		#leftside {
 			width: 30%;
 			padding-top: 1%;
-			display: none;
 			.leftsidebox {
 				width: 96%;
 				margin-bottom: 1%;
@@ -4663,9 +4676,7 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
-
-			width:50%;
+			width:60%;
 			#contact-details {
 				
 				li {
@@ -4943,7 +4954,7 @@
 				width: 200px;
 			}
 			aside.contact {
-				width: 125px;
+				width: 145px;
 				span.tele {
 					width: 99%;
 					img{
@@ -4952,7 +4963,7 @@
 					}
 
 					a#contact-number {
-						font-size: 0.8em;
+						font-size: 0.9em;
 						line-height: 25px;
 						width: 82%;
 					}
@@ -4962,8 +4973,8 @@
 				}
 			}
 			#toggle-menu,button {
-				left: 20px;
-				top: 65px;
+				left: 3vw;
+				top: 7vh;
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -4972,9 +4983,7 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-					left: 3%;
-					top: 108px;
-					width: 92%;
+					width: 96%;
 					li {
 						width: 100%;
 						height: 50px;
@@ -5017,7 +5026,7 @@
 		/*header end*/
 
 		#side-bar-btn{
-			left:89vw;
+
 
 		}
 		#contact-bar-btn{
@@ -5027,7 +5036,6 @@
 		#leftside {
 			width: 30%;
 			padding-top: 1%;
-			display: none;
 			.leftsidebox {
 				width: 96%;
 				margin-bottom: 1%;
@@ -5113,7 +5121,6 @@
 		/*#leftside end*/
 		#leftside2 {
 			width: 200px;
-
 			h1 {
 				text-indent: 2%;
 				font-size: 0.65em;
@@ -5138,8 +5145,7 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
-			width:50%;
+			width:60%;
 			#contact-details {
 				
 				li {
@@ -5417,7 +5423,7 @@
 
 			}
 			aside.contact {
-				width: 120px;
+				width: 145px;
 				span.tele {
 					width: 99%;
 					img{
@@ -5426,18 +5432,18 @@
 					}
 
 					a#contact-number {
-						font-size: 0.8em;
+						font-size: 0.9em;
 
 					}
 				}
 				span#opening-time {
 					line-height: 20px;
-					font-size: 0.65em;
+					font-size: 0.7em;
 				}
 			}
 			#toggle-menu,button {
-				left: 20px;
-				top: 65px;
+				left: 1vw;
+				top: 7vh;
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -5446,9 +5452,8 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-					left: 3%;
-					top: 108px;
-					width: 92%;
+
+					width: 96%;
 					li {
 						width: 100%;
 						height: 50px;
@@ -5487,7 +5492,7 @@
 		/*header end*/
 
 		#side-bar-btn{
-			left:88vw;
+			left: 18vw;
 
 		}
 		#contact-bar-btn{
@@ -5582,7 +5587,6 @@
 		/*#leftside end*/
 		#leftside2 {
 			width: 200px;
-
 			h1 {
 				text-indent: 2%;
 				font-size: 0.65em;
@@ -5607,7 +5611,6 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
 			width:50%;
 			#contact-details {
 				
@@ -5897,7 +5900,7 @@
 
 			}
 			aside.contact {
-				width: 115px;
+				width: 145px;
 				span.tele {
 					width: 99%;
 					img{
@@ -5906,19 +5909,19 @@
 					}
 
 					a#contact-number {
-						font-size: 0.75em;
+						font-size: 0.85em;
 						width: 81%;
 					}
 				}
 				span#opening-time {
 					line-height: 20px;
-					font-size: 0.6em;
+					font-size: 0.7em;
 				}
 			}
 			/*contact end*/
 			#toggle-menu,button {
-				left: 15px;
-				top: 65px;
+				left: 2vw;
+				top: 7vh;
 				font-size: 0.9em;
 			}
 			nav {
@@ -5926,8 +5929,8 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-					left: 3%;
-					top: 108px;
+					left: 1vw;
+
 					li {
 						line-height: 50px;
 						a {
@@ -5965,7 +5968,7 @@
 		}
 		/*header end*/
 		#side-bar-btn{
-			left:84vw;
+			left: 20vw;
 
 		}
 		#contact-bar-btn{
@@ -6062,7 +6065,6 @@
 		/*#leftside end*/
 		#leftside2 {
 			width: 200px;
-			left:-210px;
 
 			h1 {
 				text-indent: 2%;
@@ -6089,8 +6091,6 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
-			left: -61%;
 			width:60%;
 			#contact-details {
 				
@@ -6270,7 +6270,7 @@
 			}
 			/*Holiday details packages page end*/
 			.holiday_details_small {
-				width: 70%;
+				width: 90%;
 				float: none;
 				display: block;
 				margin: 1em auto;
@@ -6380,7 +6380,7 @@
 
 			}
 			aside.contact {
-				width: 112px;
+				width: 130px;
 				span.tele {
 					width: 99%;
 					img{
@@ -6395,13 +6395,12 @@
 					}
 				}
 				span#opening-time {
-					line-height: 20px;
-					font-size: 0.6em;
+					font-size: 0.7em;
 				}
 			}
 			#toggle-menu,button {
-				left: 15px;
-				top: 65px;
+				left: 2vw;
+				top: 7vh;
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -6411,8 +6410,8 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-					left: 3%;
-					top: 108px;
+					left: 1vw;
+
 					li {
 
 						line-height: 50px;
@@ -6451,11 +6450,9 @@
 		}
 		/*header end*/
 		#side-bar-btn{
-			left:86vw;
-
+			left: 24vw;
 		}
 		#contact-bar-btn{
-			left: 85vw;
 			
 		}
 		#leftside {
@@ -6571,7 +6568,6 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
 			width:60%;
 			#contact-details {
 				
@@ -6751,9 +6747,7 @@
 			}
 			/*Holiday details packages page end*/
 			.holiday_details_small {
-				width: 75%;
-				float: none;
-				display: block;
+				width: 90%;
 				margin: 1em auto;
 				h1 {
 					font-size: 0.85em;
@@ -6861,7 +6855,7 @@
 
 			}
 			aside.contact {
-				width: 112px;
+				width: 130px;
 				span.tele {
 					width: 99%;
 					img{
@@ -6882,8 +6876,7 @@
 			}
 			/*contact end*/
 			#toggle-menu,button {
-				left: 12px;
-				top: 65px;
+
 				font-size: 0.9em;
 			}
 			nav {
@@ -6891,9 +6884,8 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-					left: 3%;
-					top: 108px;
-					width: 92%;
+
+					width: 96%;
 					li {
 						height: 50px;
 						line-height: 50px;
@@ -6935,12 +6927,10 @@
 		}
 		/*header end*/
 		#side-bar-btn{
-			left:84vw;
+			left: 26vw;
 
 		}
 		#contact-bar-btn{
-			top: 11vh;
-			left: 81vw;
 			
 		}
 		#leftside {
@@ -7056,8 +7046,6 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
-			left: -66%;
 			width:65%;
 			#contact-details {
 				
@@ -7243,9 +7231,7 @@
 			}
 			/*Holiday details packages page end*/
 			.holiday_details_small {
-				width: 80%;
-				float: none;
-				display: block;
+				width: 90%;
 				margin: 1em auto;
 				h1 {
 					font-size: 0.85em;
@@ -7354,7 +7340,7 @@
 
 			}
 			aside.contact {
-				width: 105px;
+				width: 120px;
 				span.tele {
 					width: 99%;
 					img{
@@ -7368,13 +7354,13 @@
 					}
 				}
 				span#opening-time {
-					line-height: 20px;
-					font-size: 0.55em;
+
+					font-size: 0.6em;
 				}
 			}
 			#toggle-menu,button {
-				left: 11px;
-				top: 57px;
+
+				top: 5vh;
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -7383,9 +7369,8 @@
 				margin-bottom: 0px;
 				
 				ul#navi{
-					left: 3%;
 					top: 98px;
-					width: 92%;
+
 					li {
 						width: 100%;
 						height: 50px;
@@ -7421,18 +7406,15 @@
 		}
 		/*header end*/
 		#side-bar-btn{
-			left:80vw;
+			left: 28vw;
 
 		}
 		#contact-bar-btn{
-			top: 10vh;
-			left: 80vw;
-			
+		
 		}
 		#leftside {
 			width: 30%;
 			padding-top: 1%;
-			display: none;
 			.leftsidebox {
 				width: 96%;
 				margin-bottom: 1%;
@@ -7542,7 +7524,6 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
 			width:65%;
 			#contact-details {
 				
@@ -7723,10 +7704,8 @@
 			}
 			/*Holiday details packages page end*/
 			.holiday_details_small {
-				width: 85%;
-				float: none;
-				display: block;
-				margin: 1em auto;
+				width: 90%;
+
 				h1 {
 					font-size: 0.8em;
 				}
@@ -7838,7 +7817,7 @@
 
 			}
 			aside.contact {
-				width: 105px;
+				width: 120px;
 				span.tele {
 					width: 99%;
 
@@ -7852,13 +7831,11 @@
 					}
 				}
 				span#opening-time {
-					line-height: 20px;
-					font-size: 0.55em;
+					font-size: 0.6em;
 				}
 			}
 			#toggle-menu,button {
-				left: 11px;
-				top: 57px;
+
 				font-size: 0.9em;
 			}
 			/*contact end*/
@@ -7867,9 +7844,9 @@
 				margin-bottom: 0px;
 				
 				ul#navi {
-					left: 3%;
+
 					top: 98px;
-					width: 92%;
+
 					li {
 						height: 50px;
 						line-height: 50px;
@@ -7909,12 +7886,10 @@
 		}
 		/*header end*/
 		#side-bar-btn{
-			left:80vw;
+			left: 28vw;
 
 		}
 		#contact-bar-btn{
-			top: 10vh;
-			left: 79vw;
 			font-size:0.7em;
 			
 		}
@@ -8029,7 +8004,6 @@
 			}
 		}
 		#leftside3 {
-			top: 20em;
 			width:65%;
 			#contact-details {
 				
@@ -8209,9 +8183,6 @@
 			/*Holiday details packages page end*/
 			.holiday_details_small {
 				width: 90%;
-				margin: 0.5%;
-				float: none;
-				display: block;
 				margin: 2% auto;
 				h1 {
 					font-size: 0.8em;

@@ -2,7 +2,7 @@
   <div class="BestDeal">
 <button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
     <!--Leftside-->
-<transistion name="fade">
+<transition name="fade">
 <aside id="leftside2" v-if="!show">
 <br/>
 <h1>Filter By Season</h1>
@@ -33,7 +33,7 @@
 </ul>
 <br/>
 </aside>
-</transistion>
+</transition>
 
 <main id="content2">
 
@@ -126,6 +126,9 @@ export default {
 		
 		holiday :[
 		],
+		
+
+
         count: 10
 	}
   

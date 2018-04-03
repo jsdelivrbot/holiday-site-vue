@@ -1,9 +1,8 @@
 <template>
   <div class="AboutUs">
 <!---Leftside-->
-<transistion name="fade">
+<transition name="fade">
 <aside id="leftside3" v-if="!show">
-
 <figure>
 <figcaption>
 	<h1>Lorem ipsum dolor sit amet</h1>
@@ -19,7 +18,7 @@
 
 </figure>
 </aside>
-</transistion>
+</transition>
 <!---Main Content-->
 <main id="content2">
 <h1>Lorem ipsum dolor sit amet, consectetur</h1>

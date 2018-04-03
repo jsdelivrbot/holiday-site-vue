@@ -72,13 +72,13 @@ export default {
 	
 	name: 'HolidayPackages',
 	
-	 data(){
+	data(){
   
 		return{
 
 			show :'true',
 			
-			text:"raymond thompson",
+			text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 			
 			url: "src/assets/images/page2grandcanyon_03.jpg",
 			
