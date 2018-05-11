@@ -1,77 +1,81 @@
 <template>
-  <div id="app">
 
+	<div id="app">
 
-  <div id="wrapper">
+		<!--wrapper-->	
+		<div id="wrapper">
 
+			<!--header-->
+			<header>
+				<!---contact number-->
+				<aside class="contact">
+					<span class="tele">
+						<img v-bind:src="'src/assets/images/images/Telephone.png'" >
+						<a href="tel:0208-000-1452" id="contact-number">{{phoneNumber}}</a>
+					</span>
+					<span id="opening-time">{{openTime}}</span>
+				</aside>
 
-<header>
+				<!---logo-->
+				<figure id="logo">
+					<img v-bind:src="'src/assets/images/travel-agency-website-logo.png'">
+				</figure>
+				
+				<!---Logo end-->
+				<!---primary navigation-->
+				<nav  >
+					
+					<aside id="language-box">
+						<form>
+							<label>Language:</label>
+						<select name="language">
+							<option value="empty"></option>
+							<option value="United_Kingdom"></option>
+							<option value="Germany"></option>
+							<option value="United_States"></option>
+							<option value="Jamaica"></option>
+							<option value="France"></option>
+							<option value="Spain"></option>
+						</select>
+						</form>
+						
+					</aside>
 
-<!---contact number-->
-<aside class="contact">
-<span class="tele">
-<img v-bind:src="'src/assets/images/images/Telephone.png'" >
-<a href="tel:0208-000-1452" id="contact-number">0208-365-1452</a>
-</span>
-<span id="opening-time">Everyday 8am - 9pm</span>
-</aside>
+					<button v-on:click="testerFunction" id="toggle-menu" >Menu</button> 
 
-<!---logo-->
-<figure id="logo">
-<img v-bind:src="'src/assets/images/travel-agency-website-logo.png'">
-</figure>
-  
-<!---Logo end-->
-<!---primary navigation-->
-<nav  >
-      
-    
-<aside id="language-box">
-    <form>
-		<label>Language:</label>
-       <select name="language">
-        <option value="empty"></option>
-        <option value="United_Kingdom"></option>
-        <option value="Germany"></option>
-        <option value="United_States"></option>
-        <option value="Jamaica"></option>
-        <option value="France"></option>
-        <option value="Spain"></option>
-    </select>
-    </form>
-    
-</aside>
-		<button v-on:click="testerFunction" id="toggle-menu" >Menu</button> 
+					<ul id="navi" class="hide" v-if="testerFunction">
+						<li><router-link to="/" class="nav-item r-item">Home</router-link></li>
+						<li><router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link></li>
+						<li><router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link></li>
+						<li><router-link to="/Services" class="nav-item r-item">Services</router-link></li>
+						<li><router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link></li>
+						<li><router-link to="/Contact" class="nav-item r-item">Contact</router-link></li>
+					</ul>
 
-<ul id="navi" class="hide" v-if="testerFunction">
-<li><router-link to="/" class="nav-item r-item">Home</router-link></li>
-<li><router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link></li>
-<li><router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link></li>
-<li><router-link to="/Services" class="nav-item r-item">Services</router-link></li>
-<li><router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link></li>
-<li><router-link to="/Contact" class="nav-item r-item">Contact</router-link></li>
-</ul>
+				</nav>
+				<!---primary navigation end-->
+			</header>
+			
 
-</nav>
-<!---primary navigation end-->
-</header>
-<!--header end-->
-		
-    <router-view/>
+			<!--view-->	
+			<router-view/>
+
+		</div>
+
+		<!--footer-->	
+		<footer>
+			<ul >
+				<li><router-link to="/" class="nav-item r-item">Home</router-link></li>
+				<li><router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link></li>
+				<li><router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link></li>
+				<li><router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link></li>
+				<li><router-link to="/Contact" class="nav-item r-item">Contact</router-link></li>
+				<li><router-link to="/Services" class="nav-item r-item">Services</router-link></li>
+			</ul>
+		</footer>
+			
 	</div>
-	
-	<footer>
-<ul >
-<li><router-link to="/" class="nav-item r-item">Home</router-link></li>
-<li><router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link></li>
-<li><router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link></li>
-<li><router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link></li>
-<li><router-link to="/Contact" class="nav-item r-item">Contact</router-link></li>
-<li><router-link to="/Services" class="nav-item r-item">Services</router-link></li>
-</ul>
-</footer>
-	
-</div>
+
 </template>
 
 <script>
@@ -79,6 +83,7 @@
 export default {
 	name: 'app',
 	methods: {
+
 		testerFunction: function(){
 
 			console.log(event);
@@ -100,7 +105,18 @@ export default {
 			}
 		}
 	
+	},
+	data(){
+  
+		return{
+
+			phoneNumber: '0208-365-1452',
+			openTime: 'Everyday 8am - 9pm',
+			
+						
+		}
 	}
+	
 }
 
 

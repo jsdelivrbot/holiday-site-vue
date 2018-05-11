@@ -1,68 +1,66 @@
 <template>
-  <div class="BestDeal">
-<button id="side-bar-btn" v-on:click="leftsideFunction">SIDE</button>
-    <!--Leftside-->
 
-<aside id="leftside2" class="hide" v-if="leftsideFunction">
-<br/>
-<h1>Filter By Season</h1>
-<ul>
-	<li v-for="season in season"><a href="">{{season.title}}</a></li>
+  	<div class="BestDeal">
+		<button id="side-bar-btn" v-on:click="leftsideFunction">SIDE</button>
+   	
+	    <!--Leftside-->
 
-</ul>
-<br/>
-<br/>
-<h1>Filter By Location</h1>
-<ul>
-	<li v-for="location in location"><a href="">{{location.title}}</a></li>
+		<aside id="leftside2" class="hide" v-if="leftsideFunction">
+			<br/>
+			<h1>Filter By Season</h1>
+			<ul>
+				<li v-for="season in season"><a href="">{{season.title}}</a></li>
 
-</ul>
-<br/>
-<br/>
-<h1>Filter By Price</h1>
-<ul>
-	<li v-for="price in price"><a href="">{{price.title}}</a></li>
+			</ul>
+			<br/><br/>
+			<h1>Filter By Location</h1>
+			<ul>
+				<li v-for="location in location"><a href="">{{location.title}}</a></li>
 
-</ul>
-<br/>
-<br/>
-<h1>Filter By Rating</h1>
-<ul>
-	<li v-for="rating in rating"><a href="">{{rating.title}}</a></li>
+			</ul>
+			<br/><br/>
+			<h1>Filter By Price</h1>
+			<ul>
+				<li v-for="price in price"><a href="">{{price.title}}</a></li>
 
-</ul>
-<br/>
-</aside>
+			</ul>
+			<br/><br/>
+			<h1>Filter By Rating</h1>
+			<ul>
+				<li v-for="rating in rating"><a href="">{{rating.title}}</a></li>
 
-
-<main id="content2">
-
-<article class="holiday_details_small" v-for="count in count" >
-<h1>{{title}}</h1>
-<figure>
-
-<img :src="url"/>
-
-<figcaption>
-<span class="holidayprice" >From <span class="offerbox-price">{{pricesmall}}</span></span>
-<p>Location: {{place}}.</p>
-<p> Available: {{month}}.</p>
-<a href="">View Details</a>
-</figcaption>
-
-</figure>
+			</ul>
+			<br/>
+		</aside>
 
 
-</article>
+		<main id="content2">
 
+			<article class="holiday_details_small" v-for="count in count" >
 
+				<h1>{{title}}</h1>
+				<figure>
 
-<br/>
+					<img :src="url"/>
 
-</main>
+					<figcaption>
+					<span class="holidayprice" >From <span class="offerbox-price">{{pricesmall}}</span></span>
+					<p>Location: {{place}}.</p>
+					<p> Available: {{month}}.</p>
+					<a href="">View Details</a>
+					</figcaption>
 
-<div class="clearfix"></div>
-  </div>
+				</figure>
+
+			</article>
+
+			<br/>
+
+		</main>
+
+		<div class="clearfix"></div>
+	</div>
+	
 </template>
 
 <script>
