@@ -1,9 +1,9 @@
 <template>
   <div class="Contact">
-    <button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
+    <button v-on:click="contactFunction" id="side-bar-btn">CONTACT</button>
 <!--Leftside-->
 <transition name="fade">
-<aside id="leftside3" v-if="!show">
+<aside id="contactside" class="hide" v-if="contactFunction">
 
 <ul id="contact-details" >
 	<li><span><img :src= "'src/assets/images/images/Telephone.png'" ></span>Phone: <br/>123 436 7890</li>
@@ -61,8 +61,32 @@ Enim odit dolor sequi voluptatem esse doloribus libero commodi ea debitis id nos
 
 <script>
 export default {
-  name: 'Contact',
-  data(){
+	methods: {
+
+		contactFunction: function(){
+
+			console.log(event);
+
+			event.preventDefault();
+			
+			var el = document.getElementById("contactside");
+
+			var box = el.getAttribute("class");
+
+			if(box == "hide"){
+
+					el.setAttribute("class", "show");
+
+			}
+			else{
+					el.setAttribute("class", "hide");
+
+			}
+		}
+	
+	},
+	name: 'Contact',
+	data(){
   
 		return{
 

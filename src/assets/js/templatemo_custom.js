@@ -12,7 +12,6 @@
 
 jQuery(document).ready(function($){
 	
-	
 /*------------------------------------------------------------------------*/
 /*	1.	Plugins Init
 /*------------------------------------------------------------------------*/
@@ -28,9 +27,6 @@ jQuery(document).ready(function($){
 	}
 	
 	toolTipInit();
-
-
-
 
 	/************** Open Different Pages *********************/
 	$("nav li a").click(function(){
@@ -93,5 +89,4 @@ jQuery(document).ready(function($){
 		return false;
 	});
 
-
-	
+});

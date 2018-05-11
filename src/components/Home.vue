@@ -1,9 +1,9 @@
 <template>
   <div class="Home">
 
-<button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
+<button id="side-bar-btn" v-on:click="leftSideFunction">SIDE</button>
 <!--Leftside-->
-<aside id="leftside" class="hide" v-if="!show">
+<aside id="leftside" class="hide" v-if="leftSideFunction">
 
 <!---Search form-->
 <section class="leftsidebox" >
@@ -281,9 +281,33 @@
 <!--scripting-->
 <script>
 export default {
-  name: 'Home',
-  data(){
-  
+
+	methods: {
+		leftSideFunction: function(){
+
+			console.log(event);
+
+			event.preventDefault();
+			
+			var el = document.getElementById("leftside");
+
+			var box = el.getAttribute("class");
+
+			if(box == "hide"){
+
+					el.setAttribute("class", "show");
+
+			}
+			else{
+					el.setAttribute("class", "hide");
+
+			}
+		}
+	
+	},
+	name: 'Home',
+	data(){
+	
 		return{
 
 			show :'true',
@@ -292,7 +316,7 @@ export default {
 		}
 	
 	}
- 
+
 }
 </script>
 

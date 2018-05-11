@@ -1,9 +1,9 @@
 <template>
   <div class="BestDeal">
-<button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
+<button id="side-bar-btn" v-on:click="leftsideFunction">SIDE</button>
     <!--Leftside-->
-<transition name="fade">
-<aside id="leftside2" v-if="!show">
+
+<aside id="leftside2" class="hide" v-if="leftsideFunction">
 <br/>
 <h1>Filter By Season</h1>
 <ul>
@@ -33,7 +33,7 @@
 </ul>
 <br/>
 </aside>
-</transition>
+
 
 <main id="content2">
 
@@ -67,72 +67,97 @@
 
 <script>
 export default {
+
+	methods: {
+
+		leftsideFunction: function(){
+
+			console.log(event);
+
+			event.preventDefault();
+			
+			var el = document.getElementById("leftside2");
+
+			var box = el.getAttribute("class");
+
+			if(box == "hide"){
+
+					el.setAttribute("class", "show");
+
+			}
+			else{
+					el.setAttribute("class", "hide");
+
+			}
+		}
+	
+	},
 	name: 'BestDeal',
 	  
-  data(){
-  
-  	return{
-		
-		show: 'true',
-		
-		url: "src/assets/images/page2grandcanyon_03.jpg",
-		
-		title:'Lorem ipsum dolor sit amet.',
-		
-		pricesmall:'$399 - $599',
-						
-		place:'Yellowstone',
-		
-		month:'June',
+	data(){
 	
-		season :[
+		return{
+			
+			show: 'true',
+			
+			url: "src/assets/images/page2grandcanyon_03.jpg",
+			
+			title:'Lorem ipsum dolor sit amet.',
+			
+			pricesmall:'$399 - $599',
+							
+			place:'Yellowstone',
+			
+			month:'June',
 		
-			{title:'Winter'},
-			{title:'Summer'},
-			{title:'Spring'},
-			{title:'Autumn'}
-		
-		],
-		
-		location :[
-		
-			{title:'London'},
-			{title:'Paris'},
-			{title:'Madrid'},
-			{title:'Rome'},
-			{title:'Dubai'}
-		
-		],
-		
-		price :[
-		
-			{title:'$100 - $500'},
-			{title:'$500 - $1000'},
-			{title:'$1000 - $1500'},
-			{title:'$1500 - $2000'},
-			{title:'$2000 +'}
-		
-		],
-		
-		rating :[
-		
-			{title:'1 Star'},
-			{title:'2 Star'},
-			{title:'3 Star'},
-			{title:'4 Star'},
-			{title:'5 Star'}
-		
-		],
-		
-		holiday :[
-		],
-		
+			season :[
+			
+				{title:'Winter'},
+				{title:'Summer'},
+				{title:'Spring'},
+				{title:'Autumn'}
+			
+			],
+			
+			location :[
+			
+				{title:'London'},
+				{title:'Paris'},
+				{title:'Madrid'},
+				{title:'Rome'},
+				{title:'Dubai'}
+			
+			],
+			
+			price :[
+			
+				{title:'$100 - $500'},
+				{title:'$500 - $1000'},
+				{title:'$1000 - $1500'},
+				{title:'$1500 - $2000'},
+				{title:'$2000 +'}
+			
+			],
+			
+			rating :[
+			
+				{title:'1 Star'},
+				{title:'2 Star'},
+				{title:'3 Star'},
+				{title:'4 Star'},
+				{title:'5 Star'}
+			
+			],
+			
+			holiday :[
+			],
+			
 
 
-        count: 10
-	}
-  
-  }	
+			count: 10
+		}
+	
+	}	
  
 }
 </script>

@@ -2,11 +2,11 @@
 
   <div class="HolidayPackages">
 		
-<button v-on:click="show = !show" id="side-bar-btn">SIDE</button>
+<button v-on:click="leftsideFunction" id="side-bar-btn" >SIDE</button>
 
 <!---Leftside-->
-<transition name="fade">
-<aside id="leftside2" v-if="!show">
+
+<aside id="leftside2" class="hide" v-if="leftsideFunction" >
 <br/>
 <h1>Filter By Season</h1>
 <ul>
@@ -36,7 +36,7 @@
 </ul>
 <br/>
 </aside>
-</transition>
+
 
 <main id="content2">
 
@@ -69,9 +69,31 @@
 <script>
 export default {
 
+	methods: {
+
+		leftsideFunction: function(){
+
+			console.log(event);
+
+			event.preventDefault();
+			
+			var el = document.getElementById("leftside2");
+
+			var box = el.getAttribute("class");
+
+			if(box == "hide"){
+
+					el.setAttribute("class", "show");
+
+			}
+			else{
+					el.setAttribute("class", "hide");
+
+			}
+		}
 	
+	},
 	name: 'HolidayPackages',
-	
 	data(){
   
 		return{
@@ -134,7 +156,9 @@ export default {
 			count: 10
 		}
 	
-	}	
+	}
+
+	
  
 }
 </script>
