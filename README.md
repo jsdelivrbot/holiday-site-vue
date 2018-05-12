@@ -1,4 +1,4 @@
-![Travel Agency](/assets/Pagesimages/page1.jpg)
+![Travel Agency](/assets/page1.jpg)
 
 ## Travel Agency
 Travel agency is a holiday booking website where you can make holiday reservations for various holiday destinations all over the world. Website design used provided by https://www.phpjabbers.com/free-website-templates.php
@@ -42,11 +42,6 @@ sudo npm run build
 
 ```
 
-<<<<<<< HEAD
-End with an example of getting some data out of the system or using it for a little demo
-
-=======
->>>>>>> 86733b87ebbe8497852fb8cd3d0f658eceb397f6
 ## Running the tests
 
 
