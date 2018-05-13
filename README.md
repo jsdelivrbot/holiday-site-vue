@@ -1,4 +1,4 @@
-![Travel Agency](/assets/Pagesimages/page1.jpg)
+![Travel Agency](/assets/page1.jpg)
 
 ## Travel Agency
 Travel agency is a holiday booking website where you can make holiday reservations for various holiday destinations all over the world. Website design used provided by https://www.phpjabbers.com/free-website-templates.php
@@ -61,13 +61,12 @@ sudo npm run build
 
  - $Id: jquery.validate.js 6403 2009-06-17 14:27:16Z joern.zaefferer $
 
- - Dual licensed under the MIT and GPL licenses:
+ * Dual licensed under the MIT and GPL licenses:
  -   http://www.opensource.org/licenses/mit-license.php
  -   http://www.gnu.org/licenses/gpl.html
 
 * HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * ! jQuery v1.10.2 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
-
 
 
 ## Contributing
