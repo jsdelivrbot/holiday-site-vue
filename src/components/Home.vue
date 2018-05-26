@@ -1,5 +1,5 @@
 <template>
-	<div class="Home">
+	<div class="Home page">
 
 		<button id="side-bar-btn" v-on:click="leftSideFunction">SIDE</button>
 		<!--Leftside-->

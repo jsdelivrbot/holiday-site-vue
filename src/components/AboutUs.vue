@@ -1,6 +1,6 @@
 <template>
 
-	<div class="AboutUs">
+	<div class="AboutUs page">
 		<!---Leftside3-->
 		<aside id="leftside3" >
 			<figure>
