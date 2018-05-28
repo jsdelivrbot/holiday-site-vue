@@ -1,6 +1,6 @@
 {
-  "name": "Start on Heroku: Node.js",
-  "description": "A barebones Node.js app using Express 4",
+  "name": "Travel Agency",
+  "description": "Vue. js App",
   "repository": "https://github.com/raythompsonwebdev/Holiday-Site-Vue",
   "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
   "keywords": ["node", "vuejs", "heroku"],
