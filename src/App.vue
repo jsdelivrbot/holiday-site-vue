@@ -1,34 +1,33 @@
 <template>
+<div id="app">
 
-	<div id="app">
+  <!--wrapper-->
+  <div id="wrapper">
 
-		<!--wrapper-->	
-		<div id="wrapper">
-
-			<!--header-->
-			<header>
-				<!---contact number-->
-				<aside class="contact">
-					<span class="tele">
+    <!--header-->
+    <header>
+      <!---contact number-->
+      <aside class="contact">
+        <span class="tele">
 						<img v-bind:src="'src/assets/images/images/Telephone.png'" >
 						<a href="tel:0208-000-1452" id="contact-number">{{phoneNumber}}</a>
 					</span>
-					<span id="opening-time">{{openTime}}</span>
-				</aside>
+        <span id="opening-time">{{openTime}}</span>
+      </aside>
 
-				<!---logo-->
-				<figure id="logo">
-					<img v-bind:src="'src/assets/images/travel-agency-website-logo.png'">
-				</figure>
-				
-				<!---Logo end-->
-				<!---primary navigation-->
-				<nav  >
-					
-					<aside id="language-box">
-						<form>
-							<label>Language:</label>
-						<select name="language">
+      <!---logo-->
+      <figure id="logo">
+        <img v-bind:src="'src/assets/images/travel-agency-website-logo.png'">
+      </figure>
+
+      <!---Logo end-->
+      <!---primary navigation-->
+      <nav>
+
+        <aside id="language-box">
+          <form>
+            <label>Language:</label>
+            <select name="language">
 							<option value="empty"></option>
 							<option value="United_Kingdom"></option>
 							<option value="Germany"></option>
@@ -37,132 +36,149 @@
 							<option value="France"></option>
 							<option value="Spain"></option>
 						</select>
-						</form>
-						
-					</aside>
+          </form>
 
-					<button v-on:click="testerFunction" id="toggle-menu" >Menu</button> 
+        </aside>
 
-					<ul id="navi" class="hide" v-if="testerFunction">
-						<li><router-link to="/" class="nav-item r-item">Home</router-link></li>
-						<li><router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link></li>
-						<li><router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link></li>
-						<li><router-link to="/Services" class="nav-item r-item">Services</router-link></li>
-						<li><router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link></li>
-						<li><router-link to="/Contact" class="nav-item r-item">Contact</router-link></li>
-					</ul>
+        <button v-on:click="testerFunction" id="toggle-menu">Menu</button>
 
-				</nav>
-				<!---primary navigation end-->
-			</header>
-			
-			<transition name ="router-anim">
+        <ul id="navi" class="hide" v-if="testerFunction">
+          <li>
+            <router-link to="/" class="nav-item r-item">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link>
+          </li>
+          <li>
+            <router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link>
+          </li>
+          <li>
+            <router-link to="/Services" class="nav-item r-item">Services</router-link>
+          </li>
+          <li>
+            <router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link>
+          </li>
+          <li>
+            <router-link to="/Contact" class="nav-item r-item">Contact</router-link>
+          </li>
+        </ul>
 
-				<!--view-->	
-				<router-view/>
+      </nav>
+      <!---primary navigation end-->
+    </header>
 
-			</transition>
+    <transition name="router-anim">
 
-		</div>
+      <!--view-->
+      <router-view/>
+    </transition>
 
-		<!--footer-->	
-		<footer>
-			<ul >
-				<li><router-link to="/" class="nav-item r-item">Home</router-link></li>
-				<li><router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link></li>
-				<li><router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link></li>
-				<li><router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link></li>
-				<li><router-link to="/Contact" class="nav-item r-item">Contact</router-link></li>
-				<li><router-link to="/Services" class="nav-item r-item">Services</router-link></li>
-			</ul>
-		</footer>
-			
-	</div>
+  </div>
 
+  <!--footer-->
+  <footer>
+    <ul>
+      <li>
+        <router-link to="/" class="nav-item r-item">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/BestDeal" class="nav-item r-item">BestDeal</router-link>
+      </li>
+      <li>
+        <router-link to="/AboutUs" class="nav-item r-item">AboutUs</router-link>
+      </li>
+      <li>
+        <router-link to="/HolidayPackages" class="nav-item r-item">HolidayPackages</router-link>
+      </li>
+      <li>
+        <router-link to="/Contact" class="nav-item r-item">Contact</router-link>
+      </li>
+      <li>
+        <router-link to="/Services" class="nav-item r-item">Services</router-link>
+      </li>
+    </ul>
+  </footer>
+
+</div>
 </template>
 
 <script>
-
 export default {
-	name: 'app',
-	methods: {
+  name: 'app',
+  methods: {
 
-		testerFunction: function(){
+    testerFunction: function() {
 
-			console.log(event);
+      //console.log(event);
 
-			event.preventDefault();
-			
-			var el = document.getElementById("navi");
+      event.preventDefault();
 
-			var box = el.getAttribute("class");
+      var el = document.getElementById("navi");
 
-			if(box == "hide"){
+      var box = el.getAttribute("class");
 
-					el.setAttribute("class", "show");
+      if (box == "hide") {
 
-			}
-			else{
-					el.setAttribute("class", "hide");
+        el.setAttribute("class", "show");
 
-			}
+      } else {
+        el.setAttribute("class", "hide");
+
+      }
 
 
-		}
-	
-	},
-	data(){
-  
-		return{
+    }
 
-			phoneNumber: '0208-365-1452',
-			openTime: 'Everyday 8am - 9pm',
-			
-						
-		}
-	}
-	
+  },
+  data() {
+
+    return {
+
+      phoneNumber: '0208-365-1452',
+      openTime: 'Everyday 8am - 9pm',
+
+
+    }
+  }
+
 }
-
 </script>
 
 <style lang="scss">
-
 @import 'main.scss';
 
-.router-anim-enter-active{
+.router-anim-enter-active {
 
-	animation:coming 1s;
-	animation-delay: 1s;
-	opacity:0;
+    animation: coming 1s;
+    animation-delay: 1s;
+    opacity: 0;
 }
 
-.router-anim-leave-active{
+.router-anim-leave-active {
 
-	animation:going 1s;
+    animation: going 1s;
 }
 
-@keyframes going{
-	from{
-		transform : translateX(0);
-	}
-	to{
-		transform: translateX(-50px);
-		opacity:0;
-	}
-
-}
-
-@keyframes coming{
-	from{
-		transform : translateX(-50px);
-		opacity:0;
-	}
-	to{
-		transform: translateX(0px);
-		opacity:1;
-	}
+@keyframes going {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
 
 }
 
+@keyframes coming {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
 </style>

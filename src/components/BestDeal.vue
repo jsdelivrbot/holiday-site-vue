@@ -2,7 +2,7 @@
 
   	<div class="BestDeal">
 		<button id="side-bar-btn" v-on:click="leftsideFunction">SIDE</button>
-   	
+
 	    <!--Leftside-->
 
 		<aside id="leftside2" class="hide" v-if="leftsideFunction">
@@ -60,7 +60,7 @@
 
 		<div class="clearfix"></div>
 	</div>
-	
+
 </template>
 
 <script>
@@ -73,7 +73,7 @@ export default {
 			console.log(event);
 
 			event.preventDefault();
-			
+
 			var el = document.getElementById("leftside2");
 
 			var box = el.getAttribute("class");
@@ -88,75 +88,73 @@ export default {
 
 			}
 		}
-	
+
 	},
 	name: 'BestDeal',
-	  
+
 	data(){
-	
+
 		return{
-			
+
 			show: 'true',
-			
+
 			url: "src/assets/images/page2grandcanyon_03.jpg",
-			
+
 			title:'Lorem ipsum dolor sit amet.',
-			
+
 			pricesmall:'$399 - $599',
-							
+
 			place:'Yellowstone',
-			
+
 			month:'June',
-		
+
 			season :[
-			
+
 				{title:'Winter'},
 				{title:'Summer'},
 				{title:'Spring'},
 				{title:'Autumn'}
-			
+
 			],
-			
+
 			location :[
-			
+
 				{title:'London'},
 				{title:'Paris'},
 				{title:'Madrid'},
 				{title:'Rome'},
 				{title:'Dubai'}
-			
+
 			],
-			
+
 			price :[
-			
+
 				{title:'$100 - $500'},
 				{title:'$500 - $1000'},
 				{title:'$1000 - $1500'},
 				{title:'$1500 - $2000'},
 				{title:'$2000 +'}
-			
+
 			],
-			
+
 			rating :[
-			
+
 				{title:'1 Star'},
 				{title:'2 Star'},
 				{title:'3 Star'},
 				{title:'4 Star'},
 				{title:'5 Star'}
-			
+
 			],
-			
+
 			holiday :[
 			],
-			
-
 
 			count: 10
 		}
-	
-	}	
- 
+
+	}
+
 }
 </script>
 

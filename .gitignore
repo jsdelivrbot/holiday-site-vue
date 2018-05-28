@@ -49,15 +49,10 @@ Temporary Items
 LICENSE.md
 node_modules/
 Files/
-config/
-postcssrc.js
-static/
-crossdomain.xml
+static
 CHANGELOG.md
 CONTRIBUTING.md
-browserconfig.xml
 .project
-.editorconfig
 index.html
 src/sass-files/
 src/partials/.sass-cache/
