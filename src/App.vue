@@ -17,10 +17,10 @@
 
       <!---logo-->
       <figure id="logo">
-        <img v-bind:src="'src/assets/images/travel-agency-website-logo.png'">
+        <img v-bind:src="'./src/assets/images/travel-agency-website-logo.png'">
       </figure>
 
-      <!---Logo end-->
+
       <!---primary navigation-->
       <nav>
 
@@ -71,6 +71,7 @@
 
       <!--view-->
       <router-view/>
+
     </transition>
 
   </div>
@@ -126,7 +127,6 @@ export default {
 
       }
 
-
     }
 
   },
@@ -145,6 +145,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import 'main.scss';
 
 .router-anim-enter-active {
@@ -159,17 +160,6 @@ export default {
     animation: going 1s;
 }
 
-@keyframes going {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50px);
-        opacity: 0;
-    }
-
-}
-
 @keyframes coming {
     from {
         transform: translateX(-50px);
@@ -181,4 +171,17 @@ export default {
     }
 
 }
+
+@keyframes going {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+}
+
+
 </style>
