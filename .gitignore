@@ -45,19 +45,21 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.gitignore
 
 LICENSE.md
 node_modules/
 Files/
 CHANGELOG.md
 CONTRIBUTING.md
-.project
-
-src/
-
-assets/
-.gitignore
 README.md
+src/
+static/
+assets/
+
+
+
+
 
 
 
