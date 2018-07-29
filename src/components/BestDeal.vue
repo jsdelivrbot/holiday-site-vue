@@ -1,159 +1,197 @@
 <template>
+<div class="BestDeal">
+  <button id="side-bar-btn" v-on:click="leftsideFunction">SIDE</button>
 
-  	<div class="BestDeal">
-		<button id="side-bar-btn" v-on:click="leftsideFunction">SIDE</button>
+  <!--Leftside-->
 
-	    <!--Leftside-->
+  <aside id="leftside2" class="hide" v-if="leftsideFunction">
+    <br/>
+    <h1>Filter By Season</h1>
+    <ul>
+      <li v-for="season in season" :key="season"><a href="">{{season.title}}</a></li>
 
-		<aside id="leftside2" class="hide" v-if="leftsideFunction">
-			<br/>
-			<h1>Filter By Season</h1>
-			<ul>
-				<li v-for="season in season"><a href="">{{season.title}}</a></li>
+    </ul>
+    <br/><br/>
+    <h1>Filter By Location</h1>
+    <ul>
+      <li v-for="location in location" :key="location"><a href="">{{location.title}}</a></li>
 
-			</ul>
-			<br/><br/>
-			<h1>Filter By Location</h1>
-			<ul>
-				<li v-for="location in location"><a href="">{{location.title}}</a></li>
+    </ul>
+    <br/><br/>
+    <h1>Filter By Price</h1>
+    <ul>
+      <li v-for="price in price" :key="price"><a href="">{{price.title}}</a></li>
 
-			</ul>
-			<br/><br/>
-			<h1>Filter By Price</h1>
-			<ul>
-				<li v-for="price in price"><a href="">{{price.title}}</a></li>
+    </ul>
+    <br/><br/>
+    <h1>Filter By Rating</h1>
+    <ul>
+      <li v-for="rating in rating" :key="rating"><a href="">{{rating.title}}</a></li>
 
-			</ul>
-			<br/><br/>
-			<h1>Filter By Rating</h1>
-			<ul>
-				<li v-for="rating in rating"><a href="">{{rating.title}}</a></li>
-
-			</ul>
-			<br/>
-		</aside>
+    </ul>
+    <br/>
+  </aside>
 
 
-		<main id="content2">
+  <main id="content2">
 
-			<article class="holiday_details_small" v-for="count in count" >
+    <article class="holiday_details_small" v-for="count in count" :key="count">
 
-				<h1>{{title}}</h1>
-				<figure>
+      <h1>{{title}}</h1>
+      <figure>
 
-					<img :src="url"/>
+        <img :src="url" />
 
-					<figcaption>
-					<span class="holidayprice" >From <span class="offerbox-price">{{pricesmall}}</span></span>
-					<p>Location: {{place}}.</p>
-					<p> Available: {{month}}.</p>
-					<a href="">View Details</a>
-					</figcaption>
+        <figcaption>
+          <span class="holidayprice">From <span class="offerbox-price">{{pricesmall}}</span></span>
+          <p>Location: {{place}}.</p>
+          <p> Available: {{month}}.</p>
+          <a href="">View Details</a>
+        </figcaption>
 
-				</figure>
+      </figure>
 
-			</article>
+    </article>
 
-			<br/>
+    <br/>
 
-		</main>
+  </main>
 
-		<div class="clearfix"></div>
-	</div>
-
+  <div class="clearfix"></div>
+</div>
 </template>
 
 <script>
 export default {
 
-	methods: {
+  
 
-		leftsideFunction: function(){
+  methods: {
 
-			console.log(event);
+    leftsideFunction: function() {
 
-			event.preventDefault();
+      //console.log(event);
 
-			var el = document.getElementById("leftside2");
+      event.preventDefault();
 
-			var box = el.getAttribute("class");
+      var el = document.getElementById("leftside2");
 
-			if(box == "hide"){
+      var box = el.getAttribute("class");
 
-					el.setAttribute("class", "show");
+      if (box == "hide") {
 
-			}
-			else{
-					el.setAttribute("class", "hide");
+        el.setAttribute("class", "show");
 
-			}
-		}
+      } else {
 
-	},
-	name: 'BestDeal',
+        el.setAttribute("class", "hide");
 
-	data(){
+      }
+    }
 
-		return{
+  },
 
-			show: 'true',
+  name: 'BestDeal',
 
-			url: "src/assets/images/page2grandcanyon_03.jpg",
+  data() {
 
-			title:'Lorem ipsum dolor sit amet.',
+    return {
 
-			pricesmall:'$399 - $599',
+      show: 'true',
 
-			place:'Yellowstone',
+      url: "src/assets/images/page2grandcanyon_03.jpg",
 
-			month:'June',
+      title: 'Lorem ipsum dolor sit amet.',
 
-			season :[
+      pricesmall: '$399 - $599',
 
-				{title:'Winter'},
-				{title:'Summer'},
-				{title:'Spring'},
-				{title:'Autumn'}
+      place: 'Yellowstone',
 
-			],
+      month: 'June',
 
-			location :[
+      season: [
 
-				{title:'London'},
-				{title:'Paris'},
-				{title:'Madrid'},
-				{title:'Rome'},
-				{title:'Dubai'}
+        {
+          title: 'Winter'
+        },
+        {
+          title: 'Summer'
+        },
+        {
+          title: 'Spring'
+        },
+        {
+          title: 'Autumn'
+        }
 
-			],
+      ],
 
-			price :[
+      location: [
 
-				{title:'$100 - $500'},
-				{title:'$500 - $1000'},
-				{title:'$1000 - $1500'},
-				{title:'$1500 - $2000'},
-				{title:'$2000 +'}
+        {
+          title: 'London'
+        },
+        {
+          title: 'Paris'
+        },
+        {
+          title: 'Madrid'
+        },
+        {
+          title: 'Rome'
+        },
+        {
+          title: 'Dubai'
+        }
 
-			],
+      ],
 
-			rating :[
+      price: [
 
-				{title:'1 Star'},
-				{title:'2 Star'},
-				{title:'3 Star'},
-				{title:'4 Star'},
-				{title:'5 Star'}
+        {
+          title: '$100 - $500'
+        },
+        {
+          title: '$500 - $1000'
+        },
+        {
+          title: '$1000 - $1500'
+        },
+        {
+          title: '$1500 - $2000'
+        },
+        {
+          title: '$2000 +'
+        }
 
-			],
+      ],
 
-			holiday :[
-			],
+      rating: [
 
-			count: 10
-		}
+        {
+          title: '1 Star'
+        },
+        {
+          title: '2 Star'
+        },
+        {
+          title: '3 Star'
+        },
+        {
+          title: '4 Star'
+        },
+        {
+          title: '5 Star'
+        }
 
-	}
+      ],
+
+      holiday: [],
+
+      count: 10
+    }
+
+  }
 
 }
 </script>
@@ -161,7 +199,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 
 

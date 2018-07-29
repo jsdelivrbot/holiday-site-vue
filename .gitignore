@@ -49,18 +49,32 @@ Temporary Items
 LICENSE.md
 node_modules/
 Files/
-
+index.html
 CHANGELOG.md
 CONTRIBUTING.md
 .project
-index.html
-
+.postcssrc.json
+.babelrc
+static/
+src/
 src/partials/.sass-cache/
-src/assets/js/templatemo custom.js
+src/partials/
+src/components/
+src/App.vue
+src/main.js
+src/main.scss
 src/npm-debug.log
-src/assets/images/
-src/assets/fonts/
+src/assets/mq.sass
 src/assets/icons/
-dist/static/images/
+package.json
+package-lock.json
+assets/
+build/
+config/
+build/
+assets/
+.gitignore
+README.md
+app.json
 
 
